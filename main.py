@@ -9,7 +9,7 @@ import pandas as pd
 import IPython
 from ipywidgets.embed import embed_minimal_html
 import ipywidgets
-API_KEY = 'AIzaSyD-n_jcfKkN2udkFC4oxS9b-EaWP39oJeA'
+API_KEY = ''
 gmaps.configure(api_key=API_KEY)
 
 
