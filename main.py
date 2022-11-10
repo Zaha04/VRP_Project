@@ -14,7 +14,7 @@ gmaps.configure(api_key=API_KEY)
 
 
 po=[]
-data=['Brasov','Codlea','Sacele','Rasnov']
+data=['Brasov','Codlea','Sacele','Rasnov'] #Add your address here
 e=data
 request_1 = 'https://maps.googleapis.com/maps/api/geocode/json?address='
 test=[]
@@ -46,7 +46,7 @@ depot = {
 'location':(test[0]['results'][0]['geometry']['location']['lat'], test[0]['results'][0]['geometry']['location']['lng'])
 }
 
-
+#Configure the pin point for the depots
 depot_layer = gmaps.symbol_layer(
     [depot['location']], hover_text='Depot', info_box_content='Depot',
     fill_color='white', stroke_color='red', scale=8
@@ -56,6 +56,7 @@ depot_layer = gmaps.symbol_layer(
     [depot['location']], hover_text='Depot', info_box_content='Depot',
     fill_color='white', stroke_color='red', scale=8
     )
+#You can edit here how many vehicles are going to deliver in this route
 num_vehicles = 1
 
 colors = ['blue', 'red', 'green', '#800080', '#000080', '#008080']
